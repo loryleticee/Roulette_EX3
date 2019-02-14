@@ -8,5 +8,13 @@
 
 interface PlayerInterface
 {
+    /**
+     * @param Round $round
+     */
+    public function bet(Round $round);
 
+    /**
+     * @return int
+     */
+    public function getBank():int;
 }

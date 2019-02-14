@@ -5,6 +5,7 @@ namespace App\Model\Game;
 
 use App\Model\Console\ConsoleInteraction;
 use App\Model\Cases\CaseRoulette;
+use App\Model\Player\HumanPlayer;
 
 class Game
 {
@@ -28,15 +29,20 @@ class Game
 
   public function start()
   {
+    $players = [];
 
     $this->ConsoleInteraction->gameSay("Bienvenue dans la roulette infernale !\n");
+
     for($i=0; $i < 3; $i++){
       $test = $this->ConsoleInteraction->askText("Votre nom de joueur ");
       $thunes = $this->ConsoleInteraction->askText("Votre cagnotte ?  ");
       if ($test === null) {
         break;
       }
+
+      $players[]= new HumanPlayer();
     }
+
 
 
     //$this->ConsoleInteraction->askText("Sur quel chiffre voulez vous parier ?");
