@@ -1,4 +1,8 @@
 <?php
+
+declare(strict_types = 1);
+
+namespace App\Model\Player;
 /**
  * Created by IntelliJ IDEA.
  * User: AissatouDiop
@@ -19,12 +23,12 @@ class HumanPlayer implements PlayerInterface
     /**
      * @var int
      */
-    private $bank;
+    private $money;
 
-    public function __construct(string $name, int $bank)
+    public function __construct(string $name, int $money)
     {
         $this->name = $name;
-        $this->bank = $bank;
+        $this->money = $money;
 
     }
 
@@ -41,11 +45,17 @@ class HumanPlayer implements PlayerInterface
         return $this->name;
     }
     /**
+ * @return int
+ */
+    public function getMoney() :int
+    {
+        return $this->money;
+    }
+    /**
      * @return int
      */
     public function getBank() :int
     {
-        return $this->bank;
+        return $this->money;
     }
-
 }

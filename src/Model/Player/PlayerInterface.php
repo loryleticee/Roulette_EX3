@@ -1,4 +1,8 @@
 <?php
+
+declare(strict_types = 1);
+
+namespace App\Model\Player;
 /**
  * Created by IntelliJ IDEA.
  * User: AissatouDiop
@@ -16,5 +20,5 @@ interface PlayerInterface
     /**
      * @return int
      */
-    public function getBank():int;
+    public function getMoney():int;
 }

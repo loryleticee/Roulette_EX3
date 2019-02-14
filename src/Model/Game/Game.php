@@ -33,15 +33,27 @@ class Game
 
     $this->ConsoleInteraction->gameSay("Bienvenue dans la roulette infernale !\n");
 
-    for($i=0; $i < 3; $i++){
-      $test = $this->ConsoleInteraction->askText("Votre nom de joueur ");
-      $thunes = $this->ConsoleInteraction->askText("Votre cagnotte ?  ");
-      if ($test === null) {
+    for ($i = 0; $i < 3; $i++) {
+      $name = $this->ConsoleInteraction->askText("Votre nom de joueur ");
+
+      if ($name === null) {
         break;
       }
 
-      $players[]= new HumanPlayer();
+      $money = $this->ConsoleInteraction->askText("Votre cagnotte ?  ");
+
+      if ($money === null) {
+        /*
+         * il ne pourra pas forcement jouer ,mais pourra être sur la table
+         */
+
+          $money = 1;
+      }
+
+      $players[] = new HumanPlayer($name,(int)$money) ;
+
     }
+  }
 
 
 
@@ -49,7 +61,7 @@ class Game
     //echo $this->CaseRoulette->Finalresult();
     //$this->ConsoleInteraction->displayWheels($this->CaseRoulette);
     //$this->ConsoleInteraction->askYesNo('Ca roule ?');
-  }
+
 
   public function getScoreBoard()
   {
@@ -58,8 +70,3 @@ class Game
 
 
 }
-
-
-
-
- ?>
