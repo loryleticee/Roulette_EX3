@@ -1,0 +1,17 @@
+{
+    "name": "maucot/roulette_ex3",
+    "require": {
+        "symfony/var-dumper": "^4.2",
+        "symfony/console": "^4.2"
+    },
+    "license": "proprietaire",
+   "autoload": {
+       "psr-4": {"App\\": "src/"}
+   },
+    "authors": [
+        {
+            "name": "Romain Moko",
+            "email": "maucotel.romain@gmail.com"
+        }
+    ]
+}

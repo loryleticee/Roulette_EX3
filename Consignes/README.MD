@@ -1,0 +1,37 @@
+- Lancer le programme
+ - Banque Montant a zero
+-- Manche --
+     - Ajouter un participant (Bot | Humain ) avec [Name, Budget] ou +
+     - Croupier lance "Faite vos jeux"
+     - Chaque joueur mise 1-6 fois
+        [somme €]
+        - Choix du type de mise :
+            - Des chiffres [1-6 mise]
+            - Un ensemble
+                - pair/impaire
+                - rouge/noir
+                - manquer/passer (0-18 ou 19-36)        
+     - Rien ne va plus !
+     - Lance la roulette => Donne un Chiffre
+     - Répartir les gains
+        - zero: La banque gagne
+        - 1 exact : mise * 36
+        - 2 chiffre : mise * 17
+        - 3 chiffre : mise * 11
+        - 4 chiffre : 8
+        - 5 chiffre : 6
+        - 6 chiffre : 5
+        - Ensemble : mise * 2
+     - Afficher Budget des joueurs
+     - Des participant quitte la table
+     - Manche suivante ?
+- ScoreBoard de chaque joueur
+    - Recette de la banque
+    Liste :
+    - Nom des joueur
+    - Budget de départ
+    - Delta du joueur
+    - Pour chaque manche
+        - Mise
+        - resultat roulette
+        - delta
