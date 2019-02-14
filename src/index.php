@@ -2,8 +2,8 @@
 declare(strict_types=1);
 require_once __DIR__.'/../vendor/autoload.php';
 
-use App\Model\ConsoleInteraction;
-use App\Model\Game;
+use App\Model\Console\ConsoleInteraction;
+use App\Model\Game\Game;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Model;
+namespace App\Model\Game;
 
-use App\Model\ConsoleInteraction;
-use App\Model\CaseRoulette;
+use App\Model\Console\ConsoleInteraction;
+use App\Model\Cases\CaseRoulette;
 
 class Game
 {
@@ -32,6 +32,7 @@ class Game
     $this->ConsoleInteraction->gameSay("Bienvenue dans la roulette infernale !\n");
     for($i=0; $i < 3; $i++){
       $test = $this->ConsoleInteraction->askText("Votre nom de joueur ");
+      $thunes = $this->ConsoleInteraction->askText("Votre cagnotte ?  ");
       if ($test === null) {
         break;
       }
