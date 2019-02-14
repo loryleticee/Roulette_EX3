@@ -29,11 +29,19 @@ class Game
   public function start()
   {
 
-    $this->ConsoleInteraction->gameSay("Faites vos jeux !\n");
-    $this->ConsoleInteraction->askInt("Sur quel chiffre voulez vous parier ?");
-    echo $this->CaseRoulette->Finalresult();
-    $this->ConsoleInteraction->displayWheels($this->CaseRoulette);
-    $this->ConsoleInteraction->askYesNo('Ca roule ?');
+    $this->ConsoleInteraction->gameSay("Bienvenue dans la roulette infernale !\n");
+    for($i=0; $i < 3; $i++){
+      $test = $this->ConsoleInteraction->askText("Votre nom de joueur ");
+      if ($test === null) {
+        break;
+      }
+    }
+
+
+    //$this->ConsoleInteraction->askText("Sur quel chiffre voulez vous parier ?");
+    //echo $this->CaseRoulette->Finalresult();
+    //$this->ConsoleInteraction->displayWheels($this->CaseRoulette);
+    //$this->ConsoleInteraction->askYesNo('Ca roule ?');
   }
 
   public function getScoreBoard()

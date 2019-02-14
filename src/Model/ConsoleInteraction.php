@@ -65,13 +65,14 @@ class ConsoleInteraction
         $this->symfonyStyle->newLine();
         $this->gameSay("Le {$finalResult->getNumber()} {$finalResult->getColor()} tombe !");
     }
-    public function askText(string $message): string
+    public function askText(string $message): ?string
     {
         $question = new Question($message);
         do {
             $result = $this->symfonyStyle->askQuestion($question);
+            return $result;
         } while ((string) $result === '');
-        return $result;
+
     }
     public function askInt(string $message): int
     {
