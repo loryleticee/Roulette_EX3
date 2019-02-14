@@ -36,11 +36,13 @@ class Game
 
       if($this->ConsoleInteraction->askYesNo("Voulez-vous ajouter un joueur ?")=== true){
 
-
-              $test = $this->ConsoleInteraction->askText("Votre nom de joueur ");
-              $thunes = $this->ConsoleInteraction->askText("Votre cagnotte ?  ");
+             $players= array(
+                 'name' => $this->ConsoleInteraction->askText("Votre nom de joueur "),
+                 'money' => $this->ConsoleInteraction->askText("Votre cagnotte ?  "));
 
       }
+
+      var_dump($players);
       //if ($test === null) {
        // break;
       }
